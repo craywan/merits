@@ -18,14 +18,14 @@
         </commentGenerator>
 
         <!--数据库连接参数-->
-        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/xxx?serverTimezone=Asia/Shanghai&amp;characterEncoding=utf8&amp;useSSL=false"
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/wage?serverTimezone=Asia/Shanghai&amp;characterEncoding=utf8&amp;useSSL=false"
                         userId="root"
                         password="root">
         </jdbcConnection>
 
         <!--表对应pojo-->
-        <javaModelGenerator targetPackage="com.juzi.zyyn.mbg.model.entity" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.juzi.wage.model.entity" targetProject="src/main/java">
             <property name="enableSubPackages" value="false" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
@@ -36,13 +36,12 @@
         </sqlMapGenerator>
 
         <!--mapper接口类-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.juzi.zyyn.mbg.mapper" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.juzi.wage.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
 
         <!--要生成的表-->
-        <table catalog="xxx" tableName="yyy" domainObjectName="zzz">
-            <generatedKey column="id" sqlStatement="MySql" identity="true" />
-        </table>
+        <table tableName="teacher" domainObjectName="Teacher" />
+        <table tableName="wage" domainObjectName="Wage" />
     </context>
 </generatorConfiguration>
