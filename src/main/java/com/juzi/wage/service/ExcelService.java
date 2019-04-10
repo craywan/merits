@@ -18,6 +18,6 @@ public interface ExcelService {
      * @param inputStream  BufferedInputStream输入流
      * @throws IOException
      */
-    void read(BufferedInputStream inputStream) throws IOException;
+    void read(InputStream inputStream) throws IOException;
 
 }

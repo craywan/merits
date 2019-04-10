@@ -2,6 +2,7 @@ package com.juzi.wage.service.impl;
 
 import com.alibaba.excel.EasyExcelFactory;
 import com.alibaba.excel.metadata.Sheet;
+import com.juzi.wage.component.UploadExcelEvent;
 import com.juzi.wage.dao.TeacherMapper;
 import com.juzi.wage.dao.WageMapper;
 import com.juzi.wage.model.dto.ExcelRowModel;
@@ -10,14 +11,13 @@ import com.juzi.wage.model.entity.Wage;
 import com.juzi.wage.service.ExcelService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-
-import static jdk.nashorn.internal.objects.Global.print;
 
 /**
  * @author Juzi
@@ -39,11 +39,16 @@ public class ExcelServiceImpl implements ExcelService {
     @Autowired
     private WageMapper wageMapper;
 
+    @Autowired
+    private ApplicationContext applicationContext;
+
     @Override
-    public void read(BufferedInputStream inputStream) throws IOException {
+    public void read(InputStream inputStream) throws IOException {
+
+        BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
 
         // 读取excel（限1000行内）
-        List<Object> datas = EasyExcelFactory.read(inputStream, new Sheet(1, 6, ExcelRowModel.class));
+        List<Object> datas = EasyExcelFactory.read(bufferedInputStream, new Sheet(1, 6, ExcelRowModel.class));
 
         // 遍历数据
         for (Object data : datas) {
@@ -55,7 +60,7 @@ public class ExcelServiceImpl implements ExcelService {
             BeanUtils.copyProperties(data, wage);
 
             // 没有工号，不记录此条数据
-            if(teacher.getJobNumber()==null){
+            if (teacher.getJobNumber() == null) {
                 continue;
             }
 
@@ -78,5 +83,7 @@ public class ExcelServiceImpl implements ExcelService {
             }
         }
         inputStream.close();
+        // 推送Excel存库完成事件
+        applicationContext.publishEvent(new UploadExcelEvent(this, datas));
     }
 }

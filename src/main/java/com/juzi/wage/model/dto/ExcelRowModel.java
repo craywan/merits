@@ -12,227 +12,227 @@ import lombok.Data;
 @Data
 public class ExcelRowModel extends BaseRowModel {
     @ExcelProperty(index = 1)
-    private String jobNumber;
+    private String jobNumber = "";
 
     @ExcelProperty(index = 2)
-    private String department;
+    private String department = "";
 
     @ExcelProperty(index = 3)
-    private String name;
+    private String name = "";
 
     @ExcelProperty(index = 4)
-    private String jobProperty;
+    private String jobProperty = "";
 
     @ExcelProperty(index = 5)
-    private String jobLevel;
+    private String jobLevel = "";
 
     @ExcelProperty(index = 6)
-    private String workMonth;
+    private String workMonth = "";
 
     @ExcelProperty(index = 7)
-    private String jobCoefficient;
+    private String jobCoefficient = "";
 
     @ExcelProperty(index = 8)
-    private String zzjxjs;
+    private String zzjxjs = "";
 
     @ExcelProperty(index = 9)
-    private String zzjx;
+    private String zzjx = "";
 
     @ExcelProperty(index = 10)
-    private String bkjxgzl;
+    private String bkjxgzl = "";
 
     @ExcelProperty(index = 11)
-    private String yjsjxgzl;
+    private String yjsjxgzl = "";
 
     @ExcelProperty(index = 12)
-    private String zjrs;
+    private String zjrs = "";
 
     @ExcelProperty(index = 13)
-    private String jbwcjr;
+    private String jbwcjr = "";
 
     @ExcelProperty(index = 14)
-    private String sjffjr;
+    private String sjffjr = "";
 
     @ExcelProperty(index = 15)
-    private String djX;
+    private String djX = "";
 
     @ExcelProperty(index = 16)
-    private String jxjrjt;
+    private String jxjrjt = "";
 
     @ExcelProperty(index = 17)
-    private String yjsqtjxgzjt;
+    private String yjsqtjxgzjt = "";
 
     @ExcelProperty(index = 18)
-    private String bkqtjxgzjt;
+    private String bkqtjxgzjt = "";
 
     @ExcelProperty(index = 19)
-    private String jxgzjthj;
+    private String jxgzjthj = "";
 
     @ExcelProperty(index = 20)
-    private String kcqjsgzjt;
+    private String kcqjsgzjt = "";
 
     @ExcelProperty(index = 21)
-    private String jxyjjxzj;
+    private String jxyjjxzj = "";
 
     @ExcelProperty(index = 22)
-    private String kygzl;
+    private String kygzl = "";
 
     @ExcelProperty(index = 23)
-    private String djY;
+    private String djY = "";
 
     @ExcelProperty(index = 24)
-    private String kyyjjxzj;
+    private String kyyjjxzj = "";
 
     @ExcelProperty(index = 25)
-    private String xkjsgzl;
+    private String xkjsgzl = "";
 
     @ExcelProperty(index = 26)
-    private String djZ;
+    private String djZ = "";
 
     @ExcelProperty(index = 27)
-    private String xkjsjxzj;
+    private String xkjsjxzj = "";
 
     @ExcelProperty(index = 28)
-    private String zrjsggwyjjxhj;
+    private String zrjsggwyjjxhj = "";
 
     @ExcelProperty(index = 29)
-    private String gzl;
+    private String gzl = "";
 
     @ExcelProperty(index = 30)
-    private String djGzljx;
+    private String djGzljx = "";
 
     @ExcelProperty(index = 31)
-    private String gzljx;
+    private String gzljx = "";
 
     @ExcelProperty(index = 32)
-    private String gzzl;
+    private String gzzl = "";
 
     @ExcelProperty(index = 33)
-    private String djGzzljx;
+    private String djGzzljx = "";
 
     @ExcelProperty(index = 34)
-    private String hzzljx;
+    private String hzzljx = "";
 
     @ExcelProperty(index = 35)
-    private String pjjx;
+    private String pjjx = "";
 
     @ExcelProperty(index = 36)
-    private String fdygzjxhj;
+    private String fdygzjxhj = "";
 
     @ExcelProperty(index = 37)
-    private String fdyggwyjjx;
+    private String fdyggwyjjx = "";
 
     @ExcelProperty(index = 38)
-    private String glgxs;
+    private String glgxs = "";
 
     @ExcelProperty(index = 39)
-    private String djN;
+    private String djN = "";
 
     @ExcelProperty(index = 40)
-    private String glgzjxhj;
+    private String glgzjxhj = "";
 
     @ExcelProperty(index = 41)
-    private String glggwyjjxhj;
+    private String glggwyjjxhj = "";
 
     @ExcelProperty(index = 42)
-    private String gwyjjxhj;
+    private String gwyjjxhj = "";
 
     @ExcelProperty(index = 43)
-    private String jyhdjbtHbjxb;
+    private String jyhdjbtHbjxb = "";
 
     @ExcelProperty(index = 44)
-    private String jyhdjbtXytc;
+    private String jyhdjbtXytc = "";
 
     @ExcelProperty(index = 45)
-    private String kyxkjsgljbt;
+    private String kyxkjsgljbt = "";
 
     @ExcelProperty(index = 46)
-    private String jzmsjt;
+    private String jzmsjt = "";
 
     @ExcelProperty(index = 47)
-    private String yddzjt;
+    private String yddzjt = "";
 
     @ExcelProperty(index = 48)
-    private String zdqnjsgzjt;
+    private String zdqnjsgzjt = "";
 
     @ExcelProperty(index = 49)
-    private String bkbylwyxjl;
+    private String bkbylwyxjl = "";
 
     @ExcelProperty(index = 50)
-    private String bkbydbjbt;
+    private String bkbydbjbt = "";
 
     @ExcelProperty(index = 51)
-    private String zrjsgzxjxhj;
+    private String zrjsgzxjxhj = "";
 
     @ExcelProperty(index = 52)
-    private String jxjyhdjbt;
+    private String jxjyhdjbt = "";
 
     @ExcelProperty(index = 53)
-    private String fdygzxjxhj;
+    private String fdygzxjxhj = "";
 
     @ExcelProperty(index = 54)
-    private String zxyjjxhj;
+    private String zxyjjxhj = "";
 
     @ExcelProperty(index = 55)
-    private String gzjt;
+    private String gzjt = "";
 
     @ExcelProperty(index = 56)
-    private String ndkhyjyx;
+    private String ndkhyjyx = "";
 
     @ExcelProperty(index = 57)
-    private String bdsjt;
+    private String bdsjt = "";
 
     @ExcelProperty(index = 58)
-    private String bkzsxcjt;
+    private String bkzsxcjt = "";
 
     @ExcelProperty(index = 59)
-    private String djxsgzjbt;
+    private String djxsgzjbt = "";
 
     @ExcelProperty(index = 60)
-    private String sgwyhgzjbt;
+    private String sgwyhgzjbt = "";
 
     @ExcelProperty(index = 61)
-    private String qtlsxtfxzzxgzjbt;
+    private String qtlsxtfxzzxgzjbt = "";
 
     @ExcelProperty(index = 62)
-    private String jdjfhj;
+    private String jdjfhj = "";
 
     @ExcelProperty(index = 63)
-    private String grndkhyxjl;
+    private String grndkhyxjl = "";
 
     @ExcelProperty(index = 64)
-    private String xyndkhjl;
+    private String xyndkhjl = "";
 
     @ExcelProperty(index = 65)
-    private String pyjlbthj;
+    private String pyjlbthj = "";
 
     @ExcelProperty(index = 66)
-    private String pxjxxjyf;
+    private String pxjxxjyf = "";
 
     @ExcelProperty(index = 67)
-    private String dyglgw;
+    private String dyglgw = "";
 
     @ExcelProperty(index = 68)
-    private String zzjxPxjx;
+    private String zzjxPxjx = "";
 
     @ExcelProperty(index = 69)
-    private String xs;
+    private String xs = "";
 
     @ExcelProperty(index = 70)
-    private String yjjxhj;
+    private String yjjxhj = "";
 
     @ExcelProperty(index = 71)
-    private String pxjxxjqjjxhj;
+    private String pxjxxjqjjxhj = "";
 
     @ExcelProperty(index = 72)
-    private String njxhj;
+    private String njxhj = "";
 
     @ExcelProperty(index = 73)
-    private String nyyjjt;
+    private String nyyjjt = "";
 
     @ExcelProperty(index = 74)
-    private String nyffjthj;
+    private String nyffjthj = "";
 
     @ExcelProperty(index = 75)
-    private String nbfjxjt;
+    private String nbfjxjt = "";
 }
