@@ -21,7 +21,7 @@
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/wage?serverTimezone=Asia/Shanghai&amp;characterEncoding=utf8&amp;useSSL=false"
                         userId="root"
-                        password="root">
+                        password="12345678">
         <property name="nullCatalogMeansCurrent" value="true" />
         </jdbcConnection>
 
@@ -42,7 +42,9 @@
         </javaClientGenerator>
 
         <!--要生成的表-->
-        <table tableName="teacher" domainObjectName="Teacher" />
-        <table tableName="wage" domainObjectName="Wage" />
+        <!--<table tableName="teacher" domainObjectName="Teacher" />-->
+        <!--<table tableName="wage" domainObjectName="Wage" />-->
+        <table tableName="manager" domainObjectName="Manager" />
+        <table tableName="user" domainObjectName="User" />
     </context>
 </generatorConfiguration>

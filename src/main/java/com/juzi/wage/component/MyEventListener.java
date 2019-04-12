@@ -55,7 +55,7 @@ public class MyEventListener {
             }
 
 
-            File file3 = new File(systemConfig.getApplicationHomePath()+"/教师工资表/" + jobNumber + ".xls");
+            File file3 = new File(systemConfig.getApplicationHomePath()+"/teacher/" + jobNumber + ".xls");
             if (!file3.getParentFile().exists()) {
                 file3.getParentFile().mkdir();
             }
