@@ -30,7 +30,7 @@ public class MySystemConfig {
 //        File jarFile = h.getSource();
 //        this.applicationHomePath = jarFile.getParentFile().toString();
         this.applicationHomePath= ClassUtils.getDefaultClassLoader().getResource("").getPath();
-
+        System.out.println(this.applicationHomePath);
 
         ;
     }

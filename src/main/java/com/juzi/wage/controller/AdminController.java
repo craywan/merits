@@ -29,11 +29,14 @@ public class AdminController {
 
     @PostMapping("/excel/upload")
     @ResponseBody
-    public String uploadExcel(@RequestParam("excel") MultipartFile file) throws IOException {
+    public String uploadExcel(@RequestParam(name = "excel",defaultValue = "null") MultipartFile file) throws IOException {
+       if(file==null){
+            return "上传文件不能为空";
+       }
         InputStream inputStream = file.getInputStream();
         BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
         excelService.read(bufferedInputStream);
-        return "上传完成";
+        return "上传成功";
     }
 
 }

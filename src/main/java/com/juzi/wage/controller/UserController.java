@@ -89,7 +89,7 @@ public class UserController {
                 }
            }else{
                 try {
-                    response.sendRedirect("../lxxc/admin.html");
+                    response.sendRedirect("/lxxc/admin.html");
                     return ;
                 } catch (IOException e) {
                     e.printStackTrace();
